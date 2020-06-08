@@ -80,7 +80,7 @@ a {
 }
 
 #showcase {
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   /* background: #000; */
   display: flex;
@@ -161,13 +161,16 @@ a {
 
 /* *Resume */
 #resume {
-  height: 40vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   background-color: var(--bg-light);
+}
+#resume .container {
+  /* min-height: vh; */
 }
 #resume p {
   margin: 3rem 0;
@@ -265,7 +268,7 @@ footer .footer-links {
 }
 .footer-link-box {
   background-color: var(--input-bg);
-  width: 2.4rem;
+  min-width: 2.4rem;
   height: 2.4rem;
   display: flex;
   justify-content: center;
@@ -295,5 +298,16 @@ footer .footer-links {
   }
   #contact .container {
     flex-direction: column;
+  }
+  #contact .contact-main,
+  #contact .contact-form {
+    width: 100%;
+  }
+  
+}
+@media (max-width: 520px) {
+  .contact-form input,
+  .contact-form textarea {
+  width: 100%;
   }
 }
